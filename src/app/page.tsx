@@ -1,4 +1,4 @@
-import { prisma } from "./utils/db";
+import { prisma } from "../utils/db";
 
 async function getData() {
   const data = await prisma.blogPost.findMany({
