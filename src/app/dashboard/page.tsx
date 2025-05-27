@@ -11,6 +11,7 @@ import {
 export default async function Dashboard() {
   const { getUser } = getKindeServerSession();
   const userData = await getUser();
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   async function getData() {
     const data = await prisma.blogPost.findMany({
       where: {
